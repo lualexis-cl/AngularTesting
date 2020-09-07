@@ -1,0 +1,27 @@
+.uncheck {
+  background: url('../../../../assets/images/uncheck.svg') center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+    border: none;
+    position: absolute;
+    //border-radius: 50%;
+}
+
+.check {
+  background: url('../../../../assets/images/check.svg') center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+    border: none;
+    position: absolute;
+}
+
+.paddinTopBottom {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}

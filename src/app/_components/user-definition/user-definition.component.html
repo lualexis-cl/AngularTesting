@@ -1,0 +1,130 @@
+<div class="row">
+  <div class="col-md-4">
+
+    <div class="card">
+      <h5 class="card-header">
+        User Definitions
+      </h5>
+      <div class="card-body">
+
+        <div *ngFor="let user of userDefinitions"
+          class="clikable border-radius-right"
+          [class.border-div]="this.userDefinitionSelect === user"
+          (click)="selectUserDefinition(user)">
+          <div class="row height-rows">
+
+            <div class="col-md-6">
+              <span>
+                {{ user.description }}
+              </span>
+            </div>
+
+            <div *ngIf="this.userDefinitionSelect === user" class="col-md-6 align-content-right">
+              <button class="button-trash">
+              </button>
+              <button class="button-edit border-radius-right">
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4">
+
+    <div class="card">
+      <h5 class="card-header">
+        <div class="row">
+          <div class="col-md-6">
+            Users
+          </div>
+          <div class="col-md-6 align-content-right">
+            <button class="btn btn-primary"
+              (click)="openCreateUserModal()">Add user</button>
+          </div>
+        </div>
+      </h5>
+      <div class="card-body">
+
+        <div *ngFor="let currentUser of users"
+          class="clikable border-radius-right"
+          [class.border-div]="userSelect === currentUser"
+          (click)="selectUser(currentUser)">
+          <div class="row height-rows">
+
+            <div class="col-md-6">
+              <span>
+                {{ currentUser.name + ' ' + currentUser.lastName }}
+              </span>
+            </div>
+
+            <div *ngIf="userSelect === currentUser" class="col-md-6 align-content-right">
+              <button class="button-trash">
+              </button>
+              <button class="button-edit border-radius-right">
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4">
+
+    <div class="card">
+      <h5 class="card-header">
+        <div class="row">
+          <div class="col-md-6">
+            Forms
+          </div>
+          <div class="col-md-6 align-content-right">
+            <button class="btn btn-primary"
+              (click)="openCreateAreaFormModal()">Add Form</button>
+          </div>
+        </div>
+      </h5>
+      <div class="card-body">
+
+      <div *ngFor="let areaForm of areaForms"
+        class="clikable border-radius-right"
+        [class.border-div]="areaForm === areaFormSelect"
+        (click)="selectAreaForm(areaForm)">
+        <div class="row height-rows">
+
+          <div class="col-md-4">
+            <span>
+              {{ areaForm.areaName }}
+            </span>
+          </div>
+
+          <div class="col-md-4">
+            <span>
+              {{ areaForm.formName }}
+            </span>
+          </div>
+
+          <div *ngIf="areaFormSelect === areaForm" class="col-md-4 align-content-right">
+            <button class="button-trash">
+            </button>
+            <button class="button-edit border-radius-right"
+              (click)="openEditAreaFormModal(areaForm)">
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

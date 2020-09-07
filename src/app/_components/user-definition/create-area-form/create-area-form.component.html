@@ -1,0 +1,58 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+
+  <div *ngFor="let area of areaSelects" >
+    <div class="row">
+      <div class="col-md-1">
+        <span
+          [class.play]="!area.checkedArrow"
+          [class.play-down]="area.checkedArrow"
+          [attr.aria-expanded]="area.checkedArrow"
+          (click)="selectAreaArrow(area)"></span>
+      </div>
+      <div class="col-md-1">
+        <span
+          [class.uncheck]="!area.checked"
+          [class.check]="area.checked"
+          (click)="selectAreaAll(area)"></span>
+      </div>
+      <div class="col-md-10">
+        <span>
+          {{ area.name }}
+        </span>
+      </div>
+    </div>
+
+    <div *ngFor="let form of area.forms"
+      [class.hide-div]="canCollapse(area)"
+      [class.show-div]="area.checkedArrow">
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1">
+          <span
+            [class.uncheck]="!form.checked"
+            [class.check]="form.checked"
+            (click)="selectForm(area, form)"></span>
+        </div>
+        <div class="col-md-9">
+          <span>
+            {{ form.name }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+</div>

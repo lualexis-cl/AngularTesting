@@ -1,0 +1,51 @@
+.uncheck {
+  background: url('../../../../assets/images/uncheck.svg') center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+    border: none;
+    position: absolute;
+}
+
+.check {
+  background: url('../../../../assets/images/check.svg') center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+    border: none;
+    position: absolute;
+}
+
+.play {
+  background: url('../../../../assets/images/play.svg') center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+    border: none;
+    position: absolute;
+}
+
+.play-down {
+  background: url('../../../../assets/images/downarrow.svg') center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+    border: none;
+    position: absolute;
+}
+
+.hide-div {
+  display: none;
+}
+
+.show-div {
+  display: block;
+}

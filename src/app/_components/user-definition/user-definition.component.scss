@@ -1,0 +1,23 @@
+
+.button-edit {
+  background: url('../../../assets/images/edit.svg') center no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+    border: none;
+    background-color: chartreuse;
+    //border-radius: 50%;
+}
+
+.button-trash {
+  background: url('../../../assets/images/trash.svg') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 100%;
+    width: 40px;
+    border: none;
+    background-color: red;
+}
